@@ -1,0 +1,488 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    line-height: 19px;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
+.header {
+    background-color: #ebebeb;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    height: 159px;
+    position: relative;
+    
+}
+
+.header__menu-list {
+    display: flex;
+}
+.header__menu-list li {
+    transition: all 0.5s;
+}
+.header__menu-list li:hover {
+    color: #b00000;
+}
+
+.header__menu-list li + li {
+    padding-left: 59px;
+}
+
+.header__menu-list {
+    padding-top: 70px;
+}
+
+.header__logo-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header__logo-description {
+    font-size: 12px;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin-bottom: 43px;
+    margin-top: 30px;
+}
+
+.header__contact-list {
+    padding-top: 70px;
+    font-weight: 400;
+}
+
+.header__contact-list li + li {
+    padding-top: 3px;
+}
+
+.header__visitors-sidebar {
+    display: flex;
+    justify-content:space-between ;
+    width: 300px;
+}
+
+.header__menu-authorization {
+    margin: 70px 0px 70px 40px;
+    position: relative;
+}
+
+.header__menu-links{
+    display: flex;
+    justify-content: space-between;
+    width: 55px;
+    right: 0;
+    position: absolute;
+}
+
+.header__profile-title{
+    margin-top: 24px;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+
+/* header-bottom */
+
+.header-bottom {
+    background-color: #ebebeb;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.header-bottom__content {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-bottom__switcher-language {
+    display: flex;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 19px;
+}
+
+.header-bottom__vertical-line {
+    border-left: 1px solid black;
+}
+
+.switcher-language-i {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+#switcher-language-ua {
+    padding-left: 0px;
+}
+
+#switcher-language-en {
+    padding-right: 0px;
+}
+.header-bottom__menu-list {
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+}
+
+.header-bottom__menu-list li + li {
+    padding-left: 30px;
+}
+
+.header-bottom__menu-list li {
+    transition: all 0.5s;
+}
+
+.header-bottom__menu-list li:hover {
+    color: #b00000;
+}
+
+.header-bottom__search {
+    display: flex;
+}
+
+.header-bottom__form-item {
+    width: 285px;
+    height: 42px;
+    padding-left: 37px;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
+    outline: none;
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 3px;
+    background-color: #fff;
+    color: #000000;
+    background-image: url(../images/homeImages/search-logo.svg);
+    background-repeat: no-repeat;
+    background-position: 14px;
+}
+
+.header-bottom__form-button {
+    font-size: 12px;
+    width: 70px;
+    height: 42px;
+    border: 2px solid #140064;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #140064;
+    font-weight: 600;
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 1024px;
+        padding-left: 27px;
+        padding-right: 27px;
+    }
+
+    .header-bottom__switcher-language {
+        display: none;
+    }
+
+    .header-bottom__menu {
+        display: none;
+        position: absolute;
+        top: 100px;
+    }
+
+    .header-bottom__form-item {
+        width: 800px;
+        margin-right: 17px;
+    }
+
+
+    .header__content {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 36px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 4;
+    }
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #707070;
+    }
+
+    .menu__btn > span::before {
+        content: "";
+        top: -8px;
+    }
+
+    .menu__btn > span::after {
+        content: "";
+        top: 8px;
+    }
+
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        width: 325px;
+        height: 100%;
+        margin: 0;
+        padding: 40px 0 10px;
+        list-style: none;
+
+        background-color: #fff;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+        z-index: 3;
+    }
+
+    .velo-logo {
+        /* margin-top: 30px; */
+        margin-left: 90px;
+    }
+
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: #000;
+        font-family: "Montserrat", sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    .menu__item-profile{
+        margin-left: 24px;
+        /*top: 15px;*/
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .menu__item-top {
+        padding-top: 25px;
+    }
+
+    .menu__item:hover {
+        background-color: #cfd8dc;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        left: 0;
+    }
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        transition-duration: 0.25s;
+    }
+
+    .menu__box {
+        transition-duration: 0.25s;
+    }
+
+    .menu__item {
+        transition-duration: 0.25s;
+    }
+
+    .menu-item-unique {
+        margin: 10px 0px;
+    }
+
+    .menu__box-list-adress {
+        margin-top: 30px;
+    }
+
+    .menu__box-adress {
+        padding: 3px 24px;
+        font-weight: 400;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .header-bottom__form-item {
+        width: 750px;
+    }
+}
+
+@media (max-width: 960px) {
+
+    .header-bottom__form-item {
+        width: 700px;
+    }
+}
+
+@media (max-width: 900px) {
+    .header-bottom__form-item {
+        width: 650px;
+        margin: 0 10px 0 0;
+    }
+
+    .photo__title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 840px) {
+    .header-bottom__form-item {
+        width: 600px;
+    }
+}
+
+@media (max-width: 785px) {
+    .header-bottom__form-item {
+        width: 550px;
+        margin: 0 10px 0 0;
+    }
+}
+
+
+@media (max-width: 745px) {
+    .header-bottom__form-item {
+        width: 500px;
+        margin: 0 10px 0 0;
+    }
+}
+
+@media (max-width: 685px) {
+    .header-bottom__form-item {
+        width: 450px;
+    }
+}
+
+@media (max-width: 645px) {
+    .header-bottom__form-item {
+        width: 400px;
+    }
+}
+
+@media (max-width: 585px) {
+    .header-bottom__form-item {
+        width: 350px;
+    }
+}
+
+@media (max-width: 535px) {
+    .header-bottom__form-item {
+        width: 310px;
+    }
+}
+
+@media (max-width: 499px) {
+    .container {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .header-bottom__form-item {
+        width: 300px;
+    }
+
+    .header-bottom__form-button {
+        display: none;
+    }
+
+    .header-bottom__content {
+        height: 90px;
+    }
+
+    .header-bottom__form-item {
+        margin: 0;
+    }
+
+    .menu__box {
+        width: 275px;
+    }
+
+    .menu__box-list-adress {
+        margin-top: 20px;
+    }
+
+    .velo-logo{
+        margin-left: 70px;
+    }
+
+    .menu__btn{
+        top: 32px;
+    }
+    .menu__box{
+        padding-top: 32px;
+    }
+}
+
+@media (max-width: 374px) {
+    .header-bottom__form-item {
+        width: 250px;
+    }
+}
