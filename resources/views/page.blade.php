@@ -8,11 +8,11 @@
         <div class="name-page__content">
             <div class="name-page__path">
                 <div class="name-page__pre-main-path">
-                    <a href="{{ route('allPages')}}">Велосипеди</a>
+                    <a href="{{ route('pages.index')}}">Велосипеди</a>
                 </div>
                 <img class="name-page__image-path" src="/images/search-path.svg" alt="search path icon" />
                 <div class="name-page__additional">
-                    <a href="{{ route('page', $page->code) }}">{{ $page->caption}}</a>
+                    <a href="{{ route('pages.show', $page->code) }}">{{ $page->caption}}</a>
                 </div>
             </div>
             <h1 class="name-page__title">
@@ -27,7 +27,7 @@
     <div class="container">
         <div class="main-block__content">
             <div class="main-block__image">
-                <img src="/images/{{$page->image_content}}" alt="photo of product" />
+                <img src="{{asset('storage/images/' . $page->image_content )}}" alt="photo of product" />
             </div>
             <p class="main-block__text">
                 {{$page->content}}
@@ -50,7 +50,18 @@
                 Останнє оновлення товару : {{$page->updated_at}}
             </div>
         </div>
+        <div>
+            <a href="{{route('pages.edit', $page->code)}}">
+                <button class="btn btn-dark button-product">Редагувати</button>
+            </a>
+        </div>
+        <form class="add-blog__form" action="{{route('pages.destroy', $page->code)}}" method="post">
+            @method('DELETE')
+            @csrf
+            <button class="btn btn-dark button-product" type="submit">Видалити</button>
+        </form>
     </div>
+
 </section>
 
 @endsection

@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=cyrillic"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- Styles -->
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
@@ -29,7 +29,7 @@
             <div class="header__content">
                 <nav class="header__additional-menu">
                     <ul class="header__menu-list">
-                        <li><a href="{{ route('allPages') }}">Велосипеди</a></li>
+                        <li><a href="{{ route('pages.index') }}">Велосипеди</a></li>
                         <li><a href="/">Контакти</a></li>
                         <li><a href="/">Акції</a></li>
                     </ul>

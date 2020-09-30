@@ -14,5 +14,9 @@
             @endforeach
         </div>
     </div>
+
+    <a href="{{route('pages.create')}}">
+        <button class="btn btn-dark button-product">Створити</button>
+    </a>
 </div>
 @endsection

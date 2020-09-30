@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Веломайстерня')
 <link href="{{ asset('css/home.css') }}" rel="stylesheet"> 
+
 @section('content')
 <!-- header slider -->
 <section class="header-slider">
@@ -17,7 +18,7 @@
             <div class="header-slider__description">
                 28" Cannondale TOPSTONE
             </div>
-            <a class="header-slider__btn" href="{{ route('allPages') }}">Придбати</a>
+            <a class="header-slider__btn" href="#">Придбати</a>
         </div>
     </div>
 </section>

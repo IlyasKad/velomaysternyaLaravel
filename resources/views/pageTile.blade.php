@@ -1,7 +1,7 @@
 <div class="tile-products__item">
-    <a class="tile-products__item-link" href="{{ route('page', $page->code) }}">
+    <a class="tile-products__item-link" href="{{ route('pages.show', $page->code) }}">
         <div class="tile-products__img-product">
-            <img src="/images/{{$page->image_content}}" alt="Bike" />
+            <img class="tile-products__image" src=" {{asset('storage/images/' . $page->image_intro )}}" alt="Bike" />
         </div>
 
         <div class="tile-products__title-product">
@@ -16,6 +16,18 @@
                 </div>
                 <div class="tile-products__btn">Купити</div>
             </div>
+
+            <div>
+            <a href="{{route('pages.edit', $page->code)}}">
+                <button class="btn btn-dark button-product">Редагувати</button>
+            </a>
         </div>
+        <form class="add-blog__form" action="{{route('pages.destroy', $page->code)}}" method="post">
+            @method('DELETE')
+            @csrf
+            <button class="btn btn-dark button-product" type="submit">Видалити</button>
+        </form>
+        </div>
+        
     </a>
 </div>

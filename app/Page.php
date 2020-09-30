@@ -24,6 +24,7 @@ class Page extends Model {
         return view('page', ['page' => $this]);
     }
 
+    
     public function renderTile() {
         $this->intro = $this->intro_ua;  
         $this->caption = $this->caption_ua;

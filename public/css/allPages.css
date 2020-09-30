@@ -386,10 +386,15 @@ ul {
 
 .tile-products__item {
     width: 269px;
-    height: 340px;
+    /* height: 340px; */
     box-shadow: 1px 1px 3px #707070;
     position: relative;
     margin-bottom: 40px;
+}
+
+.button-product{
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 .tile-products__icons {

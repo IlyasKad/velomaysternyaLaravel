@@ -10,6 +10,10 @@ body {
     font-weight: 600;
     line-height: 19px;
 }
+a:hover {
+    text-decoration: none;
+    color: black;
+}
 
 .container {
     max-width: 1200px;
@@ -17,6 +21,41 @@ body {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.create-form{
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    width: 500px;
+}
+
+.create__title{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.create__label{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.main-block__image{
+    margin-bottom: 20px;
+}
+
+.main-block__img{
+    margin-bottom: 10px;
+}
+
+.tile-products__image{
+    width: 260px;
+    height: 180px;
+}
+
+.file-upload{
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 a {
@@ -76,6 +115,7 @@ ul {
     margin-bottom: 43px;
     margin-top: 30px;
 }
+
 
 .header__contact-list {
     padding-top: 70px;
