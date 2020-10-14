@@ -7,14 +7,13 @@
     <div class="container">
         <div class="name-page__content">
             <div class="name-page__path">
-                <div class="name-page__pre-main-path">
-                    <a href="{{ route('pages.index')}}">Велосипеди</a>
-                </div>
-                <img class="name-page__image-path" src="/images/search-path.svg" alt="search path icon" />
-                <div class="name-page__additional">
-                    <a href="{{ route('pages.show', $page->code) }}">{{ $page->caption}}</a>
-                </div>
+                <a href="{{ route('pages.show', $page->parent->code)}}">На одну сходинку вище</a>
             </div>
+
+            <div>
+                Категорія: {{$page->parent->caption_ua}}
+           </div>
+
             <h1 class="name-page__title">
                 {{ $page->caption}}
             </h1>
@@ -30,11 +29,11 @@
                 <img src="{{asset('storage/images/' . $page->image_content )}}" alt="photo of product" />
             </div>
             <p class="main-block__text">
-                {{$page->content}}
+                {{$page->content_ua}}
             </p>
 
         </div>
-
+       
         <div class="main-block__price">
             <span>Ціна: </span>
             {{$page->price}} <img class="main-block__image-sign" src="/images/sign.png">
@@ -60,6 +59,7 @@
             @csrf
             <button class="btn btn-dark button-product" type="submit">Видалити</button>
         </form>
+        
     </div>
 
 </section>

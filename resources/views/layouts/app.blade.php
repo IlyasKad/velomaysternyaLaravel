@@ -29,7 +29,7 @@
             <div class="header__content">
                 <nav class="header__additional-menu">
                     <ul class="header__menu-list">
-                        <li><a href="{{ route('pages.index') }}">Велосипеди</a></li>
+                        <li><a href="{{ route('userIndex') }}">Велосипеди</a></li>
                         <li><a href="/">Контакти</a></li>
                         <li><a href="/">Акції</a></li>
                     </ul>

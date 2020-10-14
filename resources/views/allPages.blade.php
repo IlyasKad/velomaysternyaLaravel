@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 @section('title', 'Всі велосипеди')
 <link href="{{ asset('css/allPages.css') }}" rel="stylesheet">
 @section('content')
@@ -14,9 +14,9 @@
             @endforeach
         </div>
     </div>
-
+    
     <a href="{{route('pages.create')}}">
         <button class="btn btn-dark button-product">Створити</button>
     </a>
 </div>
-@endsection
+@endsection --}}

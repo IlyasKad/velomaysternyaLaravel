@@ -8,27 +8,14 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
 class PageController extends Controller {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index() {  
-        $pages = Page::all();
-        $tiles = [];
-        foreach ($pages as $page) { 
-            array_push($tiles, $page->renderTile());
-        }
-        return view('allPages', ['tiles' => $tiles]);
-    }
-
+   
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create() { // get 1
+    public function create($order = null) { // get 1
         return view("createPage");
     }
 
@@ -38,13 +25,13 @@ class PageController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) { //post 1
+    public function store(Request $request, $order = null) { //post 1
         $validator = $request->validate([
             'image_content' => 'required|image|mimetypes:image/jpeg,image/png',
             'image_intro' => 'required|image|mimetypes:image/jpeg,image/png',
-            'code' => 'required|unique:pages|alpha_dash|string|min:4|max:100',
-            'caption_ua' => 'required|string|min:10|max:100',
-            'caption_en' => 'required|string|min:10|max:100',
+            'code' => 'required|unique:pages|alpha_dash|string|min:1|max:100',
+            'caption_ua' => 'required|string|min:3|max:100',
+            'caption_en' => 'required|string|min:3|max:100',
             'content_ua' => 'required|string|min:20|max:2000',
             'content_en' => 'required|string|min:20|max:2000',
             'intro_ua' => 'required|string|min:20|max:750',
@@ -62,7 +49,7 @@ class PageController extends Controller {
         $page->content_en = $request->input('content_en');
         $page->intro_ua = $request->input('intro_ua');
         $page->intro_en = $request->input('intro_en');
-        
+        $page->parent_id = $request->input('parent');
         $extensionIntro = $request->file('image_intro')->getClientOriginalExtension();// получаем расширение загружаемого 
         $extensionContent = $request->file('image_content')->getClientOriginalExtension();// получаем расширение загружаемого 
 
@@ -71,7 +58,7 @@ class PageController extends Controller {
         
         $path = $request->image_content->storeAs('images', $page->image_content , 'public'); // сохранение файла
         $path = $request->image_intro->storeAs('images', $page->image_intro, 'public'); // сохранение файла
-        
+      
         $page->save();
 
         return redirect()->route('pages.show', $page->code); 
@@ -83,9 +70,31 @@ class PageController extends Controller {
      * @param  string  $code
      * @return \Illuminate\Http\Response
      */
-    public function show($code) {
+    public function show($code, $order = null) {
         $page = Page::where('code', $code)->first();
-        return $page->render();
+        return $page->render(true, $order);
+    }
+
+    public function userShow($code, $order = null) {
+        if ($code == "root") {
+            return abort(404);
+        }
+        $page = Page::where('code', $code)->first();
+        return $page->render(false, $order);
+    }
+
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index($order = null) {  
+        return $this->show('root');
+    }
+
+    public function userIndex($order = null) {  
+        $page = Page::where('code', 'root')->first();
+        return $page->render(false, $order);
     }
 
     /**
@@ -94,7 +103,7 @@ class PageController extends Controller {
      * @param  string  $code
      * @return \Illuminate\Http\Response
      */
-    public function edit($code) { // get 2
+    public function edit($code, $order = null) { // get 2
         $page = Page::where('code', $code)->first();
         return view('editPage', ['page' => $page]);
     }
@@ -106,20 +115,20 @@ class PageController extends Controller {
      * @param  string  $code
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $code) { // put 2
+    public function update(Request $request, $code, $order = null) { // put 2
         $page = Page::where('code', $code)->first();
         $validator = $request->validate([
             'image_content' => 'image|mimetypes:image/jpeg,image/png',
             'image_intro' => 'image|mimetypes:image/jpeg,image/png',
-            'caption_ua' => 'required|string|min:10|max:100',
-            'caption_en' => 'required|string|min:10|max:100',
+            'caption_ua' => 'required|string|min:3|max:100',
+            'caption_en' => 'required|string|min:3|max:100',
             'content_ua' => 'required|string|min:20|max:2000',
             'content_en' => 'required|string|min:20|max:2000',
             'intro_ua' => 'required|string|min:20|max:750',
             'intro_en' => 'required|string|min:20|max:750',
             'price' => 'required|integer|min:0',
             'code' => [
-                'required','alpha_dash','string','min:4','max:100',
+                'required','alpha_dash','string','min:1','max:100',
                 Rule::unique('pages')->ignore($page->code, 'code'),
             ],
         ]);
@@ -131,6 +140,7 @@ class PageController extends Controller {
         $page->content_en = $request->input('content_en');
         $page->intro_ua = $request->input('intro_ua');
         $page->intro_en = $request->input('intro_en');
+        $page->parent_id = $request->input('parent');
 
         // IMAGES
         
@@ -169,7 +179,7 @@ class PageController extends Controller {
      * @param  string  $code
      * @return \Illuminate\Http\Response
      */
-    public function destroy($code) {
+    public function destroy($code, $order = null) {
         $page = Page::where('code', $code)->first();
         Storage::disk('public')->delete('images/' . $page->image_content);
         Storage::disk('public')->delete('images/' . $page->image_intro);

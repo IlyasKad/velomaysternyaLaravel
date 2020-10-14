@@ -59,7 +59,11 @@ ul {
 }
 
 .name-page__title-all-pages{
-    padding-top: 35px;
+    padding-top: 15px;
+}
+
+.btn-back{
+    margin-top: 20px;
 }
 
 /* main block */
@@ -376,6 +380,18 @@ ul {
     padding-bottom: 43px;
     font-family: "Montserrat", sans-serif;
 }
+.admin-buttons {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.bike-desc{
+    margin-top: 20px;
+}
+
+.admin-buttons-right {
+    margin-right: 20px;
+}
 
 .tile-products__main {
     display: flex;
@@ -395,6 +411,16 @@ ul {
 .button-product{
     margin-bottom: 5px;
     margin-top: 10px;
+    font-size: 14px;
+}
+
+.sort-tiles{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sort-tiles__items{
+    margin-right: 10px;
 }
 
 .tile-products__icons {
