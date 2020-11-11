@@ -16,7 +16,8 @@ class PageController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create($order = null) { // get 1
-        return view("createPage");
+        $categories = Page::getCategories();
+        return view("createPage", ['categories' => $categories]);
     }
 
     /**
@@ -56,7 +57,7 @@ class PageController extends Controller {
         $page->image_content = $page->code."_content.".$extensionContent;  // создаем имя файла  и записываем в бд
         $page->image_intro = $page->code."_intro.".$extensionIntro;  // создаем имя файла  и записываем в бд
         
-        $path = $request->image_content->storeAs('images', $page->image_content , 'public'); // сохранение файла
+        $path = $request->image_content->storeAs('images', $page->image_content, 'public'); // сохранение файла
         $path = $request->image_intro->storeAs('images', $page->image_intro, 'public'); // сохранение файла
       
         $page->save();

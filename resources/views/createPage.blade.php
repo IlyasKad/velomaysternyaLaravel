@@ -55,12 +55,8 @@
 
         <div class="input-group mb-3">
             <select id="parent" name="parent">
-                @foreach ($page->getCategories() as $categoryPage)
-                    @if ($page->parent->code == $categoryPage->code)
-                        <option value="{{$categoryPage->id}}" selected>{{$categoryPage->caption_en}}</option>
-                    @else     
-                        <option value="{{$categoryPage->id}}">{{$categoryPage->caption_en}}</option>
-                    @endif
+                @foreach ($categories as $categoryPage)
+                    <option value="{{$categoryPage->id}}">{{$categoryPage->caption_en}}</option>
                 @endforeach
             </select>
         </div>
