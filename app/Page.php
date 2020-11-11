@@ -17,7 +17,7 @@ class Page extends Model {
     }
 
     public function render($forAdmin, $order = null) {
-        $this->forAdmin = $forAdmin;
+        $this->forAdmin = $forAdmin; 
         $this->orderTypes = [
             'price' => 'За ціною', 
             'created_at' => 'За датою створення',
@@ -29,7 +29,7 @@ class Page extends Model {
         } else {
             $this->orderType = $order;
         }
-
+       
         if ($this->container->type == 'one product') {
             return $this->renderOneProduct();
         }
@@ -91,7 +91,7 @@ class Page extends Model {
         return $this->hasMany('App\Page', 'parent_id')->orderBy($this->orderType, 'asc'); 
     }
 
-    public function getCategories() {
+    public static function getCategories() {
         return Page::where('container_id', '!=' , 3)->get();
     }
 
@@ -103,7 +103,27 @@ class Page extends Model {
             $this->intro = $this->intro_en;
             $this->caption = $this->caption_en;
         }
-      
+
+        if ($this->alias_of != 0) { 
+            $originalPage = Page::find($this->alias_of); 
+            $this->code = $originalPage->code;
+            if($this->intro == null) { 
+                $this->intro = $originalPage->intro_ua;
+            }
+
+            if($this->caption == null) {
+                $this->caption = $originalPage->caption_ua;
+            }
+
+            if($this->image_intro == null) {
+                $this->image_intro = $originalPage->image_intro;
+            }
+
+            if($this->price == 0) {
+                $this->price = $originalPage->price;
+            }
+           
+        }
         return view('pageTile', ['page' => $this]);
     }
 
@@ -119,3 +139,5 @@ class Page extends Model {
     }
 
 }
+
+// bike1 находится folding and hybrid
