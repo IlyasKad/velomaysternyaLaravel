@@ -32,7 +32,7 @@ ul {
 /* name of page */
 
 .name-page__content {
-    padding: 34px 0 53px;
+    padding: 34px 0 15px;
 }
 
 .name-page__path {
@@ -370,6 +370,7 @@ ul {
     color: #140064;
 }
 
+
 .tile-products__title-line {
     width: 50%;
     border-bottom: 2px solid #af60bc;
@@ -488,13 +489,13 @@ ul {
 
 .main-block__text{
     font-size: 15px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     line-height: 1.5;
 }
 .main-block__price {
     font-size: 24px;
     margin-bottom: 30px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .main-block__image-sign{
@@ -503,13 +504,31 @@ ul {
 }
 
 .main-block__buy-btn-wrapper{
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .main-block__date{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
+.tiles-bikes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-block__direction {
+    color: #42cf92;
+}
+
+.main-block__desc-increase {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.main-block__popular {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
 /* ===================================================== */
 
 @media (max-width: 1200px) {
@@ -742,9 +761,6 @@ ul {
         margin: 0 auto;
     }
 
-    .name-page__content {
-        padding: 28px 0 35px;
-    }
 
     .main-block__characteristics {
         width: 100%;
@@ -756,9 +772,7 @@ ul {
         padding-top: 7px;
     }
 
-    .name-page__content {
-        padding: 28px 0px;
-    }
+   
 
     .main-block__image {
         width: 100%;

@@ -27,23 +27,6 @@
 <!-- main block -->
 <section class="main-block">
     <div class="container">
-        <div class="main-block__content">
-            <div class="main-block__image">
-                <img src="{{asset('storage/images/' . $page->image_content )}}" alt="photo of product" />
-            </div>
-            <p class="main-block__text">
-                {{$page->content}}
-            </p>
-
-        </div>
-      
-        <div class="main-block__price">
-            <span>Ціна: </span>
-            {{$page->price}} <img class="main-block__image-sign" src="/images/sign.png">
-        </div>
-        <div class="main-block__buy-btn-wrapper">
-            <a href="#" class="main-block__buy-btn">Купити</a>
-        </div>
         <div class="main-block__date">
             <div >
                 Надійшов в магазин : {{$page->created_at}}
@@ -52,9 +35,17 @@
                 Останнє оновлення товару : {{$page->updated_at}}
             </div>
         </div>
-        
-    </div>
 
+        <div class="main-block__price">
+            <span>Ціна: </span>
+            {{$page->price}} <img class="main-block__image-sign" src="/images/sign.png">
+        </div>
+       
+        <div class="main-block__text">
+            {!! $page->content !!}    
+        </div>
+      
+    </div>
 </section>
 
 @endsection

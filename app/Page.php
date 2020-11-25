@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Macros\Parser;
 
 class Page extends Model {
     public $content;
@@ -18,12 +19,15 @@ class Page extends Model {
 
     public function render($forAdmin, $order = null) {
         $this->forAdmin = $forAdmin; 
+       
         $this->orderTypes = [
             'price' => 'За ціною', 
             'created_at' => 'За датою створення',
             'updated_at' => 'За датою оновлення',
             'order_num' => 'За замовчуванням',
         ];
+
+       
         if ($order == null) {
             $this->orderType = $this->order_type;
         } else {
@@ -37,6 +41,7 @@ class Page extends Model {
         if ($this->container->type == 'category') {
             return $this->renderCategory();
         }
+       
     }
 
     private function renderCategory() {
@@ -63,7 +68,6 @@ class Page extends Model {
         }
     }
 
-
     private function renderOneProduct() {
         $this->content = $this->content_ua;  
         $this->caption = $this->caption_ua;
@@ -72,6 +76,8 @@ class Page extends Model {
             $this->caption = $this->caption_en;
         }
 
+        $this->content = Parser::parse($this->content);
+        
         if ($this->forAdmin) {
             return view('adminOneProductPage', ['page' => $this]);
         } else {
@@ -92,37 +98,35 @@ class Page extends Model {
     }
 
     public static function getCategories() {
-        return Page::where('container_id', '!=' , 3)->get();
+        return Page::where('container_id', '!=' , 3)->get(); 
     }
 
 
-    private function renderTile() {
+    public function renderTile() {
+        
         $this->intro = $this->intro_ua;  
         $this->caption = $this->caption_ua;
+        
         if (strcmp($this->language,'en') == 0) {
             $this->intro = $this->intro_en;
             $this->caption = $this->caption_en;
         }
 
-        if ($this->alias_of != 0) { 
+        if ($this->alias_of != 0) {
             $originalPage = Page::find($this->alias_of); 
             $this->code = $originalPage->code;
-            if($this->intro == null) { 
+            if($this->intro == null) {
                 $this->intro = $originalPage->intro_ua;
             }
-
             if($this->caption == null) {
                 $this->caption = $originalPage->caption_ua;
             }
-
             if($this->image_intro == null) {
                 $this->image_intro = $originalPage->image_intro;
             }
-
             if($this->price == 0) {
                 $this->price = $originalPage->price;
-            }
-           
+            }           
         }
         return view('pageTile', ['page' => $this]);
     }
@@ -140,4 +144,4 @@ class Page extends Model {
 
 }
 
-// bike1 находится folding and hybrid
+
