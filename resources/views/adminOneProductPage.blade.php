@@ -12,7 +12,7 @@
 
             <div>
                 Категорія: {{$page->parent->caption_ua}}
-           </div>
+            </div>
 
             <h1 class="name-page__title">
                 {{ $page->caption}}
@@ -26,23 +26,20 @@
     <div class="container">
         <div class="main-block__content">
             <div class="main-block__image">
-                <img src="{{asset('storage/images/' . $page->image_content )}}" alt="photo of product" />
+                <img src="{{asset('images/images/' . $page->image_content )}}" alt="photo of product" />
             </div>
             <p class="main-block__text">
                 {{$page->content_ua}}
             </p>
 
         </div>
-       
-        <div class="main-block__price">
-            <span>Ціна: </span>
-            {{$page->price}} <img class="main-block__image-sign" src="/images/sign.png">
-        </div>
+
+
         <div class="main-block__buy-btn-wrapper">
             <a href="#" class="main-block__buy-btn">Купити</a>
         </div>
         <div class="main-block__date">
-            <div >
+            <div>
                 Надійшов в магазин : {{$page->created_at}}
             </div>
             <div>
@@ -50,6 +47,15 @@
             </div>
         </div>
         <div>
+
+
+
+            <p> customFieldsView </p>
+            {{$page->customFieldsView}}
+
+
+
+
             <a href="{{route('pages.edit', $page->code)}}">
                 <button class="btn btn-dark button-product">Редагувати</button>
             </a>
@@ -59,7 +65,7 @@
             @csrf
             <button class="btn btn-dark button-product" type="submit">Видалити</button>
         </form>
-        
+
     </div>
 
 </section>

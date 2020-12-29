@@ -21,39 +21,74 @@ a:hover {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom: 100px;
 }
 
-.create-form{
+.create__header {
+    text-align: center;
+}
+
+.btn__create_entity {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.entiry__header-h2 {
+    text-align: center;
+}
+
+.link__entity {
+    margin-bottom: 30px;
+}
+
+.custom__filed {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.buttons__entity {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.buttons__entity-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.create-form {
     margin: 0 auto;
     margin-top: 25px;
     margin-bottom: 50px;
     width: 500px;
 }
 
-.create__title{
+.create__title {
     text-align: center;
     margin-top: 30px;
 }
 
-.create__label{
+.create__label {
     font-size: 16px;
     font-weight: normal;
 }
 
-.main-block__image{
+.main-block__image {
     margin-bottom: 20px;
 }
 
-.main-block__img{
+.main-block__img {
     margin-bottom: 10px;
 }
 
-.tile-products__image{
+.tile-products__image {
     width: 260px;
     height: 180px;
 }
 
-.file-upload{
+.file-upload {
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -76,7 +111,6 @@ ul {
     justify-content: space-between;
     height: 159px;
     position: relative;
-    
 }
 
 .header__menu-list {
@@ -116,7 +150,6 @@ ul {
     margin-top: 30px;
 }
 
-
 .header__contact-list {
     padding-top: 70px;
     font-weight: 400;
@@ -128,7 +161,7 @@ ul {
 
 .header__visitors-sidebar {
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
     width: 300px;
 }
 
@@ -137,7 +170,7 @@ ul {
     position: relative;
 }
 
-.header__menu-links{
+.header__menu-links {
     display: flex;
     justify-content: space-between;
     width: 55px;
@@ -145,7 +178,7 @@ ul {
     position: absolute;
 }
 
-.header__profile-title{
+.header__profile-title {
     margin-top: 24px;
     font-weight: 400;
     position: absolute;
@@ -244,7 +277,6 @@ ul {
     font-weight: 600;
 }
 
-
 @media (max-width: 1024px) {
     .container {
         max-width: 1024px;
@@ -267,7 +299,6 @@ ul {
         margin-right: 17px;
     }
 
-
     .header__content {
         display: none;
     }
@@ -275,7 +306,6 @@ ul {
     .hamburger-menu {
         display: block;
     }
-
 
     #menu__toggle {
         opacity: 0;
@@ -344,7 +374,7 @@ ul {
         text-decoration: none;
     }
 
-    .menu__item-profile{
+    .menu__item-profile {
         margin-left: 24px;
         /*top: 15px;*/
         font-size: 17px;
@@ -404,7 +434,6 @@ ul {
         padding: 3px 24px;
         font-weight: 400;
     }
-
 }
 
 @media (max-width: 1000px) {
@@ -414,7 +443,6 @@ ul {
 }
 
 @media (max-width: 960px) {
-
     .header-bottom__form-item {
         width: 700px;
     }
@@ -443,7 +471,6 @@ ul {
         margin: 0 10px 0 0;
     }
 }
-
 
 @media (max-width: 745px) {
     .header-bottom__form-item {
@@ -509,14 +536,14 @@ ul {
         margin-top: 20px;
     }
 
-    .velo-logo{
+    .velo-logo {
         margin-left: 70px;
     }
 
-    .menu__btn{
+    .menu__btn {
         top: 32px;
     }
-    .menu__box{
+    .menu__box {
         padding-top: 32px;
     }
 }
