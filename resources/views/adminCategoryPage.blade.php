@@ -6,12 +6,25 @@
     <div class="tile-products__content">
         <div class="btn-back">
             {{-- @if ($page->parent->code != "root") --}}
-                <a href="{{ route('pages.show', $page->parent->code)}}">На одну сходинку вище</a>
+            <a href="{{ route('pages.show', $page->parent->code)}}">На одну сходинку вище</a>
             {{-- @endif --}}
         </div>
 
+        <div>
+            <a href="{{ route('entities.create')}}">
+              <h5>Створити сутність</h5>
+            </a>
+       </div>
+       <div>
+            <a href="{{ route('pages.create', 1)}}">
+               <h5>
+                    Створити нову сторінку
+               </h5>
+           </a>
+       </div>
+
         <h1 class="name-page__title name-page__title-all-pages">
-            {{$page->caption_ua}} велосипеди
+            {{$page->caption_ua}}
             {{-- big block of code? information and more --}}
         </h1>
 
@@ -29,32 +42,27 @@
             </form>
         </div>
 
+    <p class="bike-desc">
+        {{$page->content_ua}}
+    </p>
+    <hr>
 
-        <div>
-            <img class="tile-products__image" src=" {{asset('storage/images/' . $page->image_intro )}}" alt="Bike" />
-        </div>
-
-        <p class="bike-desc">
-            {{$page->content_ua}}
-        </p>
-        <hr>
-
-        <div class="sort-tiles">
-            @foreach ($page->orderTypes as $key => $value)
-                <a class="sort-tiles__items" href="{{ route('pages.show',[$page->code, $key])}}">{{$value}}</a>
-            @endforeach
-        </div>
-
-        <div>
-            <p>Поточний вид сортування: {{$page->orderTypes[$page->orderType]}}</p>
-        </div>
-        <span>
-
-            @foreach ($tiles as $tile)
-            {{$tile}}
-            @endforeach
-        </span>
+    <div class="sort-tiles">
+        @foreach ($page->orderTypes as $key => $value)
+        <a class="sort-tiles__items" href="{{ route('pages.show',[$page->code, $key])}}">{{$value}}</a>
+        @endforeach
     </div>
+
+    <div>
+        <p>Поточний вид сортування: {{$page->orderTypes[$page->orderType]}}</p>
+    </div>
+    <span>
+
+        @foreach ($tiles as $tile)
+        {{$tile}}
+        @endforeach
+    </span>
+</div>
 
 </div>
 @endsection

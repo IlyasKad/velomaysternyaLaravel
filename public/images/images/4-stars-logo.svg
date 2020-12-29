@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="12" viewBox="0 0 72 12">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_42" data-name="Rectangle 42" width="12" height="12" transform="translate(203 2667)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <rect id="Rectangle_43" data-name="Rectangle 43" width="12" height="12" transform="translate(203 2667)" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-6">
+      <path id="_1828884" data-name="1828884" d="M11.969,4.355a.637.637,0,0,0-.549-.439L7.956,3.6,6.587.4A.638.638,0,0,0,5.414.4L4.044,3.6.58,3.917A.639.639,0,0,0,.218,5.033l2.618,2.3-.772,3.4a.637.637,0,0,0,.949.689L6,9.633l2.987,1.786a.638.638,0,0,0,.949-.689l-.772-3.4,2.618-2.3a.638.638,0,0,0,.187-.678Zm0,0" transform="translate(203 2667.24)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_837" data-name="Group 837" transform="translate(-1003 -1887)">
+    <g id="Group_42" data-name="Group 42" transform="translate(0 -783)">
+      <g id="Mask_Group_21" data-name="Mask Group 21" transform="translate(800 3)" clip-path="url(#clip-path)">
+        <path id="_1828884-2" data-name="1828884" d="M11.969,4.355a.637.637,0,0,0-.549-.439L7.956,3.6,6.587.4A.638.638,0,0,0,5.414.4L4.044,3.6.58,3.917A.639.639,0,0,0,.218,5.033l2.618,2.3-.772,3.4a.637.637,0,0,0,.949.689L6,9.633l2.987,1.786a.638.638,0,0,0,.949-.689l-.772-3.4,2.618-2.3a.638.638,0,0,0,.187-.678Zm0,0" transform="translate(203 2667.24)" fill="#ffc107"/>
+      </g>
+      <g id="Mask_Group_21-2" data-name="Mask Group 21" transform="translate(815 3)" clip-path="url(#clip-path)">
+        <path id="_1828884-3" data-name="1828884" d="M11.969,4.355a.637.637,0,0,0-.549-.439L7.956,3.6,6.587.4A.638.638,0,0,0,5.414.4L4.044,3.6.58,3.917A.639.639,0,0,0,.218,5.033l2.618,2.3-.772,3.4a.637.637,0,0,0,.949.689L6,9.633l2.987,1.786a.638.638,0,0,0,.949-.689l-.772-3.4,2.618-2.3a.638.638,0,0,0,.187-.678Zm0,0" transform="translate(203 2667.24)" fill="#ffc107"/>
+      </g>
+      <g id="Mask_Group_21-3" data-name="Mask Group 21" transform="translate(830 3)" clip-path="url(#clip-path)">
+        <path id="_1828884-4" data-name="1828884" d="M11.969,4.355a.637.637,0,0,0-.549-.439L7.956,3.6,6.587.4A.638.638,0,0,0,5.414.4L4.044,3.6.58,3.917A.639.639,0,0,0,.218,5.033l2.618,2.3-.772,3.4a.637.637,0,0,0,.949.689L6,9.633l2.987,1.786a.638.638,0,0,0,.949-.689l-.772-3.4,2.618-2.3a.638.638,0,0,0,.187-.678Zm0,0" transform="translate(203 2667.24)" fill="#ffc107"/>
+      </g>
+      <g id="Mask_Group_21-4" data-name="Mask Group 21" transform="translate(845 3)" clip-path="url(#clip-path)">
+        <path id="_1828884-5" data-name="1828884" d="M11.969,4.355a.637.637,0,0,0-.549-.439L7.956,3.6,6.587.4A.638.638,0,0,0,5.414.4L4.044,3.6.58,3.917A.639.639,0,0,0,.218,5.033l2.618,2.3-.772,3.4a.637.637,0,0,0,.949.689L6,9.633l2.987,1.786a.638.638,0,0,0,.949-.689l-.772-3.4,2.618-2.3a.638.638,0,0,0,.187-.678Zm0,0" transform="translate(203 2667.24)" fill="#ffc107"/>
+      </g>
+    </g>
+    <g id="Mask_Group_23" data-name="Mask Group 23" transform="translate(860 -780)" opacity="0.5" clip-path="url(#clip-path-5)">
+      <g id="Mask_Group_22" data-name="Mask Group 22" clip-path="url(#clip-path-6)">
+        <g id="_13595" data-name="13595" transform="translate(203 2667)">
+          <g id="Group_43" data-name="Group 43">
+            <path id="Path_63" data-name="Path 63" d="M.237,5.167l3.1,2.255-1.186,3.65a.507.507,0,0,0,.052.477.477.477,0,0,0,.687.06L6,9.353l3.1,2.256a.564.564,0,0,0,.332.119.434.434,0,0,0,.355-.18.507.507,0,0,0,.052-.477L8.658,7.422l3.1-2.255A.465.465,0,0,0,11.48,4.3H7.643L6.457.648a.465.465,0,0,0-.914,0L4.357,4.3H.52a.48.48,0,0,0-.5.318A.481.481,0,0,0,.237,5.167Zm4.143-.079a.776.776,0,0,0,.72-.523L6,1.8l.9,2.767a.775.775,0,0,0,.72.523h2.909L8.175,6.8a.775.775,0,0,0-.275.846l.9,2.767L6.445,8.7a.78.78,0,0,0-.89,0L3.2,10.411l.9-2.767A.775.775,0,0,0,3.826,6.8L1.472,5.088Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

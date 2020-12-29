@@ -6,7 +6,7 @@
     <div class="tile-products__content">
         <div class="btn-back">
             @if ($page->parent->code != "root")
-                <a href="{{ route('userShow', $page->parent->code)}}">На одну сходинку вище</a>
+            <a href="{{ route('userShow', $page->parent->code)}}">На одну сходинку вище</a>
             @endif
         </div>
         <h1 class="name-page__title name-page__title-all-pages">
@@ -14,7 +14,7 @@
         </h1>
 
         <div>
-            <img class="tile-products__image" src=" {{asset('storage/images/' . $page->image_intro )}}" alt="Bike" />
+            <img class="tile-products__image" src=" {{asset('images/images/' . $page->image_intro )}}" alt="Bike" />
         </div>
         <p class="bike-desc">
             {{$page->content_ua}}

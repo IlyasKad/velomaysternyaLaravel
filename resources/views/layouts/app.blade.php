@@ -37,8 +37,8 @@
 
                 <div class="header__logo-wrapper">
                     <a href="/">
-                        <img class="header__logo-img" src="{{ asset('images/main-logo.svg') }}"
-                            alt="Логотип" />
+                        {{-- <img class="header__logo-img" src="{{ asset('images/main-logo.svg') }}"
+                            alt="Логотип" /> --}}
                     </a>
                     <div class="header__logo-description">
                         Магазин велосипедів
@@ -62,14 +62,14 @@
                     <div class="header__menu-authorization">
                         <div class="header__menu-links">
                             <a href="/">
-                                <img class="sign-in-logo" src="{{ asset('images/sign-in-logo.svg')}}" alt="Sign in logo" />
-                               
+                                {{-- <img class="sign-in-logo" src="{{ asset('images/sign-in-logo.svg')}}" alt="Sign in logo" /> --}}
+
                             </a>
                             <a href="/">
-                                <img src="{{ asset('images/basket-logo.svg')}}" alt="Basket logo logo" />
-                               
+                                {{-- <img src="{{ asset('images/basket-logo.svg')}}" alt="Basket logo logo" /> --}}
+
                             </a>
-                            
+
                         </div>
                         <div class="header__profile-title">
                             <a href="/">
@@ -92,7 +92,7 @@
                 <div class="footer-top__contacts-menu">
                     <div id="footer-top__logo">
                         <a href="/">
-                            <img src="{{ asset('images/footer-top-logo.svg')}}" alt="logo of top footer " />
+                            {{-- <img src="{{ asset('images/footer-top-logo.svg')}}" alt="logo of top footer " /> --}}
                         </a>
                     </div>
                     <ul class="footer-top__contacts-list">
@@ -105,10 +105,10 @@
                         <li class="footer-top__contacts-phone">
                             +38 (068) 92 519 04
                             <a class="footer-top__unique" href="/">
-                                <img src="{{ asset('images/telegram-icon.svg')}}" alt="telegram icon" />
+                                {{-- <img src="{{ asset('images/telegram-icon.svg')}}" alt="telegram icon" /> --}}
                             </a>
                             <a class="footer-top__unique" href="/">
-                                <img src="{{ asset('images/viber-icon.svg')}}" alt="viber icon" />
+                                {{-- <img src="{{ asset('images/viber-icon.svg')}}" alt="viber icon" /> --}}
                             </a>
                         </li>
                         <li class="footer-top__email">
@@ -192,18 +192,18 @@
                     </div>
                     <div class="footer-top__join-menu-icons">
                         <div class="footer-top__join-list">
-                            <a href="/">
-                                <img class="footer-top__icon-img" src="{{ asset('images/youtube-icon.svg')}}"
-                                    alt="facebook icon" /></a>
-                            <a href="/">
-                                <img class="footer-top__icon-img" src="{{ asset('images/instagram-icon.svg')}}"
-                                    alt="instagram icon" /></a>
-                            <a href="/">
-                                <img class="footer-top__icon-img" src="{{ asset('images/facebook-icon.svg')}}"
-                                    alt="facebook icon" /></a>
-                            <a href="/">
-                                <img class="footer-top__icon-img" src="{{ asset('images/twitter-icon.svg')}}"
-                                    alt="facebook icon" /></a>
+                            {{-- <a href="/"> --}}
+                                {{-- <img class="footer-top__icon-img" src="{{ asset('images/youtube-icon.svg')}}" --}}
+                                    {{-- alt="facebook icon" /></a> --}}
+                            {{-- <a href="/"> --}}
+                                {{-- <img class="footer-top__icon-img" src="{{ asset('images/instagram-icon.svg')}}" --}}
+                                    {{-- alt="instagram icon" /></a> --}}
+                            {{-- <a href="/"> --}}
+                                {{-- <img class="footer-top__icon-img" src="{{ asset('images/facebook-icon.svg')}}" --}}
+                                    {{-- alt="facebook icon" /></a> --}}
+                            {{-- <a href="/"> --}}
+                                {{-- <img class="footer-top__icon-img" src="{{ asset('images/twitter-icon.svg')}}" --}}
+                                    {{-- alt="facebook icon" /></a> --}}
                         </div>
                     </div>
                     <form action="" method="post" class="footer-top__join-form">
@@ -226,7 +226,7 @@
                 <div class="footer__row-first">
                     <div class="footer-logo">
                         <a href="/">
-                            <img src="{{ asset('images/footer-logo.svg')}}" alt="footer logo" />
+                            {{-- <img src="{{ asset('images/footer-logo.svg')}}" alt="footer logo" /> --}}
                         </a>
                     </div>
                     <div class="footer__item">

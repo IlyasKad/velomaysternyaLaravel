@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Веломайстерня')
-<link href="{{ asset('css/home.css') }}" rel="stylesheet"> 
+<link href="{{ asset('css/home.css') }}" rel="stylesheet">
 
 @section('content')
 <!-- header slider -->

@@ -5,7 +5,7 @@ use App\Page;
 
 class Macro {
     public function command_img($img_path, $alt) {
-				$path = asset('storage/images/' . $img_path);
+				$path = asset('images/images/' . $img_path);
 				$result = '<img src="'. $path .'" alt="'. $alt .'" />';
 				return $result;
     }
@@ -17,14 +17,14 @@ class Macro {
     }
 
     public function command_get_tiles($category_code, $order) {
-				$main_page = Page::where('code', $category_code)->first();      
-				$main_page->orderType = $order;       
-				$tiles = [];        
-				foreach ($main_page->children as $page) { 
-						if ($page->code != "root") {                
+				$main_page = Page::where('code', $category_code)->first();
+				$main_page->orderType = $order;
+				$tiles = [];
+				foreach ($main_page->children as $page) {
+						if ($page->code != "root") {
 								array_push($tiles, $page->renderTile());
-						} 
-				}        
+						}
+				}
 				return implode($tiles);
     }
 }
